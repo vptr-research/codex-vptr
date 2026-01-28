@@ -1,0 +1,33 @@
+# ===== Codex VPTR =====
+
+# macOS
+.DS_Store
+
+# binaries / default outputs
+a.out
+
+# objects / libs
+*.o
+*.a
+*.so
+*.dylib
+
+# debug symbols (macOS)
+*.dSYM/
+
+# build directories
+build/
+out/
+bin/
+
+# test executables (no extension)
+test_*
+*_asan
+
+# but keep test source files / headers
+!test_*.c
+!test_*.h
+
+# editor temp
+*.swp
+*.swo
