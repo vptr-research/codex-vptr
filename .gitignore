@@ -31,3 +31,4 @@ test_*
 # editor temp
 *.swp
 *.swo
+.codex/
