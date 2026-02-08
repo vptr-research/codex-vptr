@@ -1,0 +1,101 @@
+# Day 2 - 2026-02-07
+
+## What I Did Today
+Finished C00 (all exercises) + started C01 (stopped to study pointers)
+
+## Day Type
+A (building code)
+
+## What I Learned
+
+### New Skills
+- **Printing numbers with 2 digits**: Use division and modulo to split a number
+  - Example: 42 → print '4' then '2'
+  - `tens = n / 10 + '0'` (gets the first digit)
+  - `ones = n % 10 + '0'` (gets the last digit)
+  
+- **Recursion**: A function that calls itself
+  - Used it in `ft_putnbr` to print each digit
+  - Needs a "stop condition" or it runs forever
+  
+- **Special case for smallest negative number**: `-2147483648` can't be made positive
+  - If you try, it breaks (overflow)
+  - Had to handle it separately
+  
+- **Helper functions**: Splitting big functions into smaller ones
+  - Needed for norminette 25-line limit
+
+### Security Learning
+- **Can integer overflow be exploited?** Asked this about `ft_putnbr`
+  - Answer: Not in this case (the type system protects it)
+  - But in other code, yes (example: using negative number to bypass size checks)
+  - Started thinking like a hacker: "where can bad input cause problems?"
+  
+- **Hacker skills discussion**: Same skills for good guys and bad guys
+  - CODEX teaches elite technical skills
+  - Your choice determines if you use them legally or not
+  - Legal = better money, no risk, long career
+  - After CODEX: can reach world-class with 2-3 more years of practice
+
+### Bugs I Fixed
+
+1. **Wrong math in ex05** (when recreating it)
+   - **Problem**: Wrote `num2 = num1 + '1'` (adding ASCII codes)
+   - **Why wrong**: '0' + '1' = 97, not 1
+   - **Fix**: Changed to `num2 = num1 + 1`
+   - **Learned**: Be careful with characters vs numbers
+
+2. **Wrong type in ex02** (C01 swap exercise)
+   - **Problem**: Used `char *value` to swap integers
+   - **Why wrong**: Need `int` not `char`, and pointer wasn't initialized
+   - **Decision**: Stop and study pointers first
+
+### Git Mistake
+- **Lost my files**: Yesterday didn't add new files after deleting old ones
+  - Only the test files survived
+  - Had to rewrite ex00-05 from memory (took 15-20 min)
+  - **Learned**: Always check `git status` before committing
+  - **Learned**: Add new files right after removing old ones
+
+### Smart Decision
+- Started C01 ex02 (swap function)
+- Realized I don't understand pointers well enough
+- **Chose to stop and study instead of guessing**
+- Will use: XaveCoding videos + K&R book Chapter 5
+- **CODEX idea**: Understanding beats speed
+
+## Proof of Work
+- All C00 exercises work and tested
+- Git commit: `00682ee` - "C00 complete: ex00-07 all exercises done"
+- Started C01 ex00-01 but stopped to study
+
+## Exercises Done Today
+- [x] C00 ex06: ft_print_comb2 (print pairs of 2-digit numbers)
+- [x] C00 ex07: ft_putnbr (print any integer using recursion)
+- [x] C00 ex00-05: All recreated after losing them in git
+- [x] C01 ex00: ft_ft (simple pointer)
+- [x] C01 ex01: ft_ultimate_ft (pointer with 9 levels)
+
+## C00 Status: DONE ✅
+
+All exercises complete. Ready for C01 after studying pointers.
+
+## Tomorrow
+- Study pointers: `&`, `*`, and multi-level pointers
+- Watch XaveCoding videos
+- Read K&R book Chapter 5
+- Draw pointer diagrams on paper
+- Come back to C01 when ready
+
+## Things I Noticed
+- **Asking security questions naturally now**: "Can this be exploited?"
+- **Choosing to study instead of struggle**: Stopped when confused, will study first
+- **Git is tricky**: Lost files but learned the lesson
+- **Recursion makes sense now**: Functions calling themselves clicked
+- **Getting faster**: Rewrote 6 exercises in 20 minutes (took hours the first time)
+- **nvim setup working well**: Header insert fixed, cursor in right place
+- **English practice**: Asking for corrections when needed
+- **Following my own rules**: "No hints" - learning by struggling
+
+## Notes
+Day dedicated to finishing C00 and starting pointer study.
