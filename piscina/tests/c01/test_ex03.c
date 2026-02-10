@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ex02.c                                        :+:      :+:    :+:   */
+/*   test_ex03.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VPTR <vptr@codex.local>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 19:57:48 by VPTR              #+#    #+#             */
-/*   Updated: 2026/02/07 19:57:48 by VPTR             ###   ########.fr       */
+/*   Created: 2026/02/09 20:40:26 by VPTR              #+#    #+#             */
+/*   Updated: 2026/02/09 20:40:26 by VPTR             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_swap(int *a, int *b);
+void	ft_div_mod(int a, int b, int *div, int *mod);
 
 int	main(void)
 {
-	int	num1;
-	int	num2;
+	int	a;
+	int	b;
+	int	c;
+	int	d;
 
-	num1 = 42;
-	num2 = 32;
-	ft_swap (&num1, &num2);
-	write (1, &num1, 1);
-	write (1, &num2, 1);
+	a = 10;
+	b = 3;
+	ft_div_mod(a, b, &c, &d);
 	return (0);
 }

@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ex02.c                                        :+:      :+:    :+:   */
+/*   test_ex05.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VPTR <vptr@codex.local>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 19:57:48 by VPTR              #+#    #+#             */
-/*   Updated: 2026/02/07 19:57:48 by VPTR             ###   ########.fr       */
+/*   Created: 2026/02/09 21:23:38 by VPTR              #+#    #+#             */
+/*   Updated: 2026/02/09 21:23:38 by VPTR             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
 
 int	main(void)
 {
-	int	num1;
-	int	num2;
+	char	*strg;
 
-	num1 = 42;
-	num2 = 32;
-	ft_swap (&num1, &num2);
-	write (1, &num1, 1);
-	write (1, &num2, 1);
+	strg = "Hello";
+	ft_putstr(strg);
 	return (0);
 }

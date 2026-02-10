@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ex02.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VPTR <vptr@codex.local>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 19:57:48 by VPTR              #+#    #+#             */
-/*   Updated: 2026/02/07 19:57:48 by VPTR             ###   ########.fr       */
+/*   Created: 2026/02/09 21:19:16 by VPTR              #+#    #+#             */
+/*   Updated: 2026/02/09 21:19:16 by VPTR             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_swap(int *a, int *b);
-
-int	main(void)
+void	ft_putstr(char *str)
 {
-	int	num1;
-	int	num2;
+	int	i;
 
-	num1 = 42;
-	num2 = 32;
-	ft_swap (&num1, &num2);
-	write (1, &num1, 1);
-	write (1, &num2, 1);
-	return (0);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write (1, &str[i], 1);
+		i++;
+	}
 }

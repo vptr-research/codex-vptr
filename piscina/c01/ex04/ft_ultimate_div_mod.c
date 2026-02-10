@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ex02.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VPTR <vptr@codex.local>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 19:57:48 by VPTR              #+#    #+#             */
-/*   Updated: 2026/02/07 19:57:48 by VPTR             ###   ########.fr       */
+/*   Created: 2026/02/09 21:00:31 by VPTR              #+#    #+#             */
+/*   Updated: 2026/02/09 21:00:31 by VPTR             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_swap(int *a, int *b);
-
-int	main(void)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	num1;
-	int	num2;
+	int	temp;
 
-	num1 = 42;
-	num2 = 32;
-	ft_swap (&num1, &num2);
-	write (1, &num1, 1);
-	write (1, &num2, 1);
-	return (0);
+	temp = *a;
+	*a = *a / *b;
+	*b = temp % *b;
 }
