@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VPTR <vptr@codex.local>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 21:06:44 by VPTR              #+#    #+#             */
-/*   Updated: 2026/02/11 21:06:44 by VPTR             ###   ########.fr       */
+/*   Created: 2026/02/12 20:53:27 by VPTR              #+#    #+#             */
+/*   Updated: 2026/02/12 20:53:27 by VPTR             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
-	int	swap;
 
 	i = 0;
-	while (i < size)
+	if (str[i] == '\0')
+		return (1);
+	while (str[i] != '\0')
 	{
-		swap = tab[i];
-		tab[i] = tab[size -1];
-		tab[size -1] = swap;
-		i++;
-		size--;
+		if (str[i] >= 48 && str[i] <= 57)
+			i++;
+		else
+			return (0);
 	}
+	return (1);
 }

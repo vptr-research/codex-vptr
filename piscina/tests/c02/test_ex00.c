@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   test_ex00.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VPTR <vptr@codex.local>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 21:06:44 by VPTR              #+#    #+#             */
-/*   Updated: 2026/02/11 21:06:44 by VPTR             ###   ########.fr       */
+/*   Created: 2026/02/12 16:06:39 by VPTR              #+#    #+#             */
+/*   Updated: 2026/02/12 16:06:39 by VPTR             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	i;
-	int	swap;
+#include <unistd.h>
 
+char	*ft_strcpy(char *dest, char *src);
+
+int	main(void)
+{
+	char	*src;
+	char	dest[20];
+	int		i;
+
+	src = "Hello";
 	i = 0;
-	while (i < size)
+	ft_strcpy(dest, src);
+	while (dest[i] != '\0')
 	{
-		swap = tab[i];
-		tab[i] = tab[size -1];
-		tab[size -1] = swap;
+		write(1, &dest[i], 1);
 		i++;
-		size--;
 	}
+	return (0);
 }
