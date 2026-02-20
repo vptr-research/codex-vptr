@@ -1,47 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   test_ex11.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: VPTR <vptr@codex.local>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/14 22:23:39 by VPTR              #+#    #+#             */
-/*   Updated: 2026/02/14 22:23:39 by VPTR             ###   ########.fr       */
+/*   Created: 2026/02/19 21:23:43 by VPTR              #+#    #+#             */
+/*   Updated: 2026/02/19 21:23:43 by VPTR             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	convert_hex(char str)
+void	ft_putstr_non_printable(char *str);
+
+int	main(void)
 {
-	char	*hex;
-	int		index;
-	int		index2;
-
-	hex = "0123456789abcdef";
-	index = str / 16;
-	index2 = str % 16;
-	write (1, "\\", 1);
-	write (1, &hex[index], 1);
-	write (1, &hex[index2], 1);
-}
-
-void	ft_putstr_non_printable(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 32 && str[i] <= 126)
-		{
-			write (1, &str[i], 1);
-			i++;
-		}
-		else
-		{
-			convert_hex(str[i]);
-			i++;
-		}
-	}
+	ft_putstr_non_printable("Oi\nvoce esta bem?");
+	write (1, "\n", 1);
+	ft_putstr_non_printable("Hello\tWorld");
+	write (1, "\n", 1);
+	ft_putstr_non_printable("");
+	write (1, "\n", 1);
+	ft_putstr_non_printable("Test\x7f!");
+	write (1, "\n", 1);
+	ft_putstr_non_printable("\x01\x02\x03");
+	write (1, "\n", 1);
+	return (0);
 }
